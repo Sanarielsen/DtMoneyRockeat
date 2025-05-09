@@ -4,6 +4,8 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { NewTransactionModal } from "../NewTransactionModal";
 
 export function Header() {
+  
+
   return (    
     <HeaderContainer>
       <HeaderContent>
