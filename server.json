@@ -23,6 +23,62 @@
       "category": "Educação",
       "price": 1700,
       "createdAt": "2025-05-06T14:18:01.121Z"
+    },
+    {
+      "description": "Comprar rodinhas",
+      "price": 700,
+      "category": "Equipamentos",
+      "type": "outcome",
+      "createdAt": "2025-05-13T20:33:52.604Z",
+      "id": 4
+    },
+    {
+      "description": "Vitamina de Mamão",
+      "price": 50,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2025-05-13T20:46:43.180Z",
+      "id": 5
+    },
+    {
+      "description": "Programação de uma automação",
+      "price": 500,
+      "category": "Desenvolvimento",
+      "type": "income",
+      "createdAt": "2025-05-13T20:47:34.350Z",
+      "id": 6
+    },
+    {
+      "description": "Teste",
+      "price": 100,
+      "category": "sad",
+      "type": "income",
+      "createdAt": "2025-05-13T20:54:53.159Z",
+      "id": 7
+    },
+    {
+      "description": "Teste 2",
+      "price": 50,
+      "category": "Teste",
+      "type": "outcome",
+      "createdAt": "2025-05-13T22:55:33.213Z",
+      "id": 8
+    },
+    {
+      "description": "Teste 3",
+      "price": 52,
+      "category": "aoba",
+      "type": "income",
+      "createdAt": "2025-05-13T22:59:52.510Z",
+      "id": 9
+    },
+    {
+      "description": "Teste 5",
+      "price": 20000,
+      "category": "sad",
+      "type": "outcome",
+      "createdAt": "2025-05-13T23:01:08.541Z",
+      "id": 10
     }
   ]
 }
