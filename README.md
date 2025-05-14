@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# DTMoney v0.0.1 (by Rocketseat)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## BR Version
 
-Currently, two official plugins are available:
+Essa é uma aplicação feita seguindo o terceiro módulo das aulas de React.JS
+A ideia é ter um sistema que possua maneiras se subir valores para contabilizar
+visoes de quanto você gastou, ganhou e o seu saldo total.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tudo foi desenvolvido com a ajuda das seguintes bibliotecas:
+- Phosphor React (https://phosphoricons.com/)
+- Styled-Components (https://styled-components.com/)
+- Radix-UI (https://www.radix-ui.com/)
+- React Hook Form (https://react-hook-form.com/)
+- Zod (https://github.com/colinhacks/zod)
+- JSON:Server (https://github.com/typicode/json-server)
+- Axios (https://axios-http.com/ptbr/docs/intro)
 
-## Expanding the ESLint configuration
+Se quiser, crie uma sugestao ou pedido de feature na aba de Issues
+nesse repositório.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Qualquer coisa, entre em contato comigo em minhas redes sociais:
+@sanarielsen
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ENG Version
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This application was be developed on third module in React.JS course inside
+of Rockeatseat. The idea is have a system to safe the values you spent, gain
+and total.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+All this was developed use these libraries
+- Phosphor React (https://phosphoricons.com/)
+- Styled-Components (https://styled-components.com/)
+- Radix-UI (https://www.radix-ui.com/)
+- React Hook Form (https://react-hook-form.com/)
+- Zod (https://github.com/colinhacks/zod)
+- JSON:Server (https://github.com/typicode/json-server)
+- Axios (https://axios-http.com/ptbr/docs/intro)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+If you want, create a suggestion or request to build new feature in a page
+named Issues inside of this repository.
+
+Anyway, send a message to my DM in my social medias If you want to talk more
+about it:
+@sanarielsen
