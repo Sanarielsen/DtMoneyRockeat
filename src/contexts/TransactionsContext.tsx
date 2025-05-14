@@ -1,5 +1,6 @@
-import { createContext, useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode, useCallback } from "react";
 import { api } from "../lib/axios";
+import { createContext } from "use-context-selector";
 
 interface Transaction {
   id: number;
@@ -34,38 +35,44 @@ export const TransactionsContext = createContext<TransactionContextType>({} as T
 export function TransactionsProvider({children}: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
-  async function fetchTransactions(query?: string) {
-    const response = await api.get('/transactions', {
-      params: {
-        _sort: 'createdAt',
-        _order: 'desc',
-        q: query
-      }
-    })
-    
-    setTransactions(response.data);
-  }
+  const fetchTransactions = useCallback(
+    async (query?: string) => {
+      const response = await api.get('/transactions', {
+        params: {
+          _sort: 'createdAt',
+          _order: 'desc',
+          q: query
+        }
+      })
+      
+      setTransactions(response.data);
+    },
+    []
+  )
 
-  async function createTransaction(data: CreateTransactionInput) {
 
-    const { description, price, category, type } = data
+  const createTransaction = useCallback(
+    async (data: CreateTransactionInput) => {
 
-    //O id cria automaticamente no SQL:Server
-    const response = await api.post('/transactions', {
-      description,
-      price,
-      category,
-      type,
-      createdAt: new Date()
-    })
+      const { description, price, category, type } = data
 
-    setTransactions( state => [response.data, ...state]);
-  }
+      //O id cria automaticamente no SQL:Server
+      const response = await api.post('/transactions', {
+        description,
+        price,
+        category,
+        type,
+        createdAt: new Date()
+      })
+
+      setTransactions( state => [response.data, ...state]);
+    },[]
+  )
   
   useEffect(() => {
   
     fetchTransactions();
-  },[])
+  },[fetchTransactions])
 
   return (
     <TransactionsContext.Provider value={{ 
